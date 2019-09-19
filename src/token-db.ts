@@ -1,15 +1,8 @@
 import { IToken } from "./token-type";
 
-export class TokenDB {
+export abstract class TokenDB {
     private static tokenList: Array<IToken> = [];
     private static instance: TokenDB;
-
-    public static getInstance() {
-        if(!TokenDB.instance) {
-            TokenDB.instance = new TokenDB();
-        }
-        return TokenDB.instance;
-    }
 
     public static addToken(data: IToken): boolean {
         this.tokenList = [...this.tokenList, data];

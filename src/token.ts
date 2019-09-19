@@ -5,13 +5,9 @@ import { IToken } from './token-type';
 
 export class Token implements ITokenGenerator {
 
-    constructor() {
-        TokenDB.getInstance();
-    }
-
     public generateToken(userId: string): string {
         const newToken: IToken = { userId, tokenValue: this.generateHash(20) };
-        const result = TokenDB.addToken(newToken);
+        TokenDB.addToken(newToken);
         return newToken.tokenValue;
     }
 
