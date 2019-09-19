@@ -1,0 +1,44 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "license": "MIT",
+  "scripts": {
+    "startnormal": "ts-node src/app.ts",
+    "start": "node ./build/index.js",
+    "build": "webpack",
+    "start:dev:dep": "NODE_ENV=development webpack",
+    "win-server": "SET NODE_ENV=development && node build/index.js",
+    "run:dev": "SET NODE_ENV=development && nodemon build/index.js",
+    "test": "jest",
+    "testcoverage": "jest --coverage"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.18",
+    "@types/mongoose": "^5.5.17",
+    "@types/node": "^12.7.5",
+    "@types/supertest": "^2.0.8",
+    "jest": "^24.9.0",
+    "jest-express": "^1.10.1",
+    "nodemon": "^1.19.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^6.1.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-shell-plugin": "^0.5.0"
+  }
+}
